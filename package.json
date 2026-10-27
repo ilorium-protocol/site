@@ -16,11 +16,11 @@
     "check": "astro check"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.0",
+    "@astrojs/react": "^7.1.1",
     "@fontsource-variable/fraunces": "^5.2.0",
     "@fontsource/ibm-plex-mono": "^5.2.0",
     "@fontsource/ibm-plex-sans": "^5.2.0",
-    "astro": "^5.14.0",
+    "astro": "^7.4.2",
     "framer-motion": "^12.23.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
