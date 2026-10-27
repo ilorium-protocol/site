@@ -1,0 +1,26 @@
+---
+import ThemeToggle from './ThemeToggle.tsx';
+import { REPO_LIVE, REPO_URL } from '../lib/repo';
+const { current = '' } = Astro.props;
+---
+<header class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="/" aria-label="Ilorium home">
+      <svg class="logo-sym" viewBox="-2 -2 104 104" aria-hidden="true"><use href="#ilo-sym"></use></svg>
+      <span class="wm disp">ilorium</span>
+    </a>
+    <nav class="links lab" aria-label="Main">
+      <a href="/protocol" aria-current={current === 'protocol' ? 'page' : undefined}>Protocol</a>
+      <a href="/radiant" aria-current={current === 'radiant' ? 'page' : undefined}>Radiant</a>
+      <a href="/#probe">Probe</a>
+      <a href="/docs" aria-current={current === 'docs' ? 'page' : undefined}>Documents</a>
+      {REPO_LIVE
+        ? <a href={REPO_URL} rel="noopener">GitHub</a>
+        : <span class="soon" title="Public repository: soon">GitHub · soon</span>}
+    </nav>
+    <div class="navr">
+      <ThemeToggle client:load />
+      <a class="btn b1 cut" href="/protocol">Read the spec</a>
+    </div>
+  </div>
+</header>

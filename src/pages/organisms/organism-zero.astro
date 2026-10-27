@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import { DIMS, LAWS } from '../../data/content';
+---
+<Base title="Organism Zero — Ilorium" description="Organism Zero is the founder's own organism, measured in public from its first beat. Today it is in gestation: nothing has been observed yet.">
+  <section class="pagehead dk">
+    <div class="wrap">
+      <p class="lab dim">[ Organism Zero ]</p>
+      <h1 class="disp h1" style="font-size:clamp(38px,5.6vw,68px);margin-top:12px">In gestation. Nothing observed yet.</h1>
+      <p class="lead" style="margin-top:20px">Organism Zero is the founder's own organism. It will be measured in public from its first beat and shown as the first organism, one among others. It is a declared pilot, never an independent validation of Ilorium.</p>
+    </div>
+  </section>
+
+  <section class="sec dk">
+    <div class="wrap">
+      <div class="panel vs" style="max-width:760px">
+        <div class="vsh"><span class="lab">// vital signs</span><span class="chip unknown">UNKNOWN</span></div>
+        <p class="disp title" style="margin:4px 0 6px">organism-zero</p>
+        <div class="vsr"><span>state of being</span><span>not applicable yet · 0 beats</span></div>
+        <div class="vsr"><span>web status</span><span>In gestation</span></div>
+        <div class="vsr"><span>provenance</span><span>Founded · generation 0</span></div>
+        <div class="vsr"><span>stop key holder</span><span>the founder (human)</span></div>
+        <div class="vsr"><span>evidence bundle</span><span>not published · verdict UNKNOWN</span></div>
+        <div class="mdg">
+          {DIMS.map((d) => (
+            <div class="md">
+              <span class="lab dim">{d.name}</span>
+              <div class="pbar" style="height:12px" aria-hidden="true"><i class="k-hatch" style="width:100%"></i></div>
+              <span class="mono dim">not observed</span>
+            </div>
+          ))}
+        </div>
+        <div style="border-top:1px dashed var(--line);padding-top:14px;display:flex;flex-direction:column;gap:8px">
+          <span class="lab dim">conformity, law by law</span>
+          <div class="cbs">
+            {LAWS.map((n, i) => <span class="cb k-hatch" title={`Law ${i + 1} · ${n} · not verified`}></span>)}
+          </div>
+          <span class="mono dim">0 of 7 verified. Every law is Not verified until its tests have run.</span>
+        </div>
+      </div>
+      <p class="dim" style="margin-top:24px;max-width:46em">Everything that was not observed is drawn hatched, at the same size as what will be. Vital Signs whose bundle cannot be reached show UNKNOWN. This page changes when the Probe has recorded the first beat, and not before.</p>
+    </div>
+  </section>
+
+  <section class="sec lt">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ What it will look like ]</p>
+        <h2 class="disp h2">An example, labeled as one.</h2>
+      </div>
+      <div class="panel vs" style="max-width:760px">
+        <div class="vsh"><span class="lab">// vital signs</span><span class="chip declared">EXAMPLE DATA</span></div>
+        <p class="disp title" style="margin:4px 0 6px">example-organism</p>
+        <div class="vsr"><span>state of being</span><span>active</span></div>
+        <div class="vsr"><span>web status</span><span>Observed</span></div>
+        <div class="vsr"><span>conformity</span><span>6 conform · Law 7 not verified</span></div>
+        <div class="vsr"><span>stop key holder</span><span>human</span></div>
+      </div>
+      <p style="margin-top:20px"><a class="tlink" href="/#check">See how to check one</a></p>
+    </div>
+  </section>
+</Base>

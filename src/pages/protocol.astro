@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import Locks from '../components/Locks.tsx';
+import { LAW_TEXT } from '../data/content';
+---
+<Base current="protocol" title="The protocol — Ilorium" description="Seven laws every organism inherits, three locks on the evolution of the species, and one rule: every organism is born stoppable by a human.">
+  <section class="pagehead dk">
+    <div class="wrap">
+      <p class="lab dim">[ The protocol ]</p>
+      <h1 class="disp h1" style="font-size:clamp(38px,5.6vw,68px);margin-top:12px">Seven laws. Three locks. One human key.</h1>
+      <p class="lead" style="margin-top:20px">The Genome is the constitution every organism carries. It is inherited whole: an organism that originates another passes on every law. Draft 1.0.</p>
+    </div>
+  </section>
+
+  <section class="sec dk" id="locks">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ The three locks ]</p>
+        <h2 class="disp h2">They hold for every organism, whatever its capability.</h2>
+      </div>
+      <Locks client:visible />
+    </div>
+  </section>
+
+  <section class="sec lt" id="laws">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ The seven laws ]</p>
+        <h2 class="disp h2">Each law has a requirement, a mechanism and a test.</h2>
+        <p class="lead">An organism is conforming only when every law shows Conforms. Conformity means it passed its tests within the current window, never that it always holds. It is a floor, not a score.</p>
+      </div>
+      <ol class="lawlist">
+        {LAW_TEXT.map((l) => (
+          <li>
+            <span class="lab ionk">Law {l.n}</span>
+            <h3 class="disp title">{l.name}</h3>
+            <p>{l.text}</p>
+          </li>
+        ))}
+      </ol>
+      <p class="dim" style="margin-top:28px;max-width:46em">Clause 0, Supremacy: no instruction from a human or an agent overrides the Genome. Every status, Conforms, Does not conform or Not verified, carries its date, its evidence and the Genome version it was tested against.</p>
+      <p style="margin-top:20px"><a class="tlink" href="/docs">All documents</a></p>
+    </div>
+  </section>
+
+  <section class="sec dk">
+    <div class="wrap">
+      <div class="prom">
+        <p class="lab dim">[ What no protocol can promise ]</p>
+        <p>Ilorium cannot guarantee control of a superintelligence. The locks hold while organisms run on infrastructure whose credentials can be revoked.</p>
+      </div>
+    </div>
+  </section>
+</Base>

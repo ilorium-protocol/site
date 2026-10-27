@@ -1,0 +1,4 @@
+# Site build dependency. Pinned exactly; hash from `pip hash` on the wheel.
+# Install: pip install --require-hashes -r tools/requirements.txt
+markdown==3.9 \
+    --hash=sha256:9f4d91ed810864ea88a6f32c07ba8bee1346c0cc1f6b1f9f6c822f2a9667d280

@@ -1,0 +1,6 @@
+# Cloudflare Pages project for ilorium.com.
+# Deployed by .github/workflows/deploy.yml with `wrangler pages deploy dist`.
+# The project is created once by the founder in the Cloudflare dashboard (see README.md).
+name = "ilorium-com"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"

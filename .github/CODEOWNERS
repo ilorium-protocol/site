@@ -1,0 +1,22 @@
+# CODEOWNERS for the site repository: the germline applied to git.
+# Interim governance (governance-v1.md, section 8): the founder is the only
+# Genome Custodian and reviews every change. When two independent Custodians
+# are in office, the protected entries below move to
+# @ilorium-protocol/genome-custodians and the ruleset requires two approvals.
+#
+# Files an agent may read must never change unreviewed (deployment brief,
+# threat 4: instruction injection). The security agent reviews every change
+# to them; it comments and never approves.
+
+# Everything: the founder (interim).
+*                                 @fseldon
+
+# Protected: what agents read, and what shapes the deployed output.
+# → @ilorium-protocol/genome-custodians once two independent Custodians are in office (then: two approvals)
+/public/llms.txt                  @fseldon
+/public/.well-known/              @fseldon
+/public/_headers                  @fseldon
+/public/examples/                 @fseldon
+/scripts/                         @fseldon
+/tools/                           @fseldon
+/.github/                         @fseldon

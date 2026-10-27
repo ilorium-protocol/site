@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import { existsSync } from 'node:fs';
+import { DOCS } from '../data/content';
+import { REPO_LIVE, SPECS_BLOB } from '../lib/repo';
+
+// A document has a page when tools/build.py rendered it into public/docs/ (CI does this from the
+// protocol repository before `astro build`). Otherwise the row says "soon".
+const pageFor = (file: string) => '/docs/' + file.replace(/\.md$/, '.html');
+const rows = DOCS.map((d) => {
+  const page = pageFor(d.file);
+  const es = pageFor(d.file.replace(/\.md$/, '.es.md'));
+  const here = (p: string) => existsSync(new URL('../../public' + p, import.meta.url));
+  return { ...d, page, hasPage: here(page), esPage: here(es) ? es : null };
+});
+const rendered = rows.filter((r) => r.hasPage).length;
+---
+<Base current="docs" title="Documents — Ilorium" description="The Ilorium specifications: Genome, Proof of Life, Evidence Format, Probe, Pulse, Ecosystem. Draft 1.0.">
+  <section class="pagehead dk">
+    <div class="wrap">
+      <p class="lab dim">[ Documents ]</p>
+      <h1 class="disp h1" style="font-size:clamp(38px,5.6vw,68px);margin-top:12px">The specifications.</h1>
+      <p class="lead" style="margin-top:20px">Release 1.0 is a draft. Specifications are CC BY 4.0; code, schemas and vectors are Apache-2.0. One version of each document is kept; what changed is in the changelog.</p>
+      <p class="mono dim" style="margin-top:12px">English is the official language. Spanish files (es) are working translations; if they differ, the English version prevails.</p>
+      {!REPO_LIVE && <p class="mono dim" style="margin-top:12px">The public repository is not live yet. Source links appear when it is.</p>}
+      {rendered === 0 && <p class="mono dim" style="margin-top:12px">The rendered pages are produced by the site build from the protocol repository. None is included in this build.</p>}
+    </div>
+  </section>
+  <section class="sec lt">
+    <div class="wrap">
+      <ul class="doclist">
+        {rows.map((d) => (
+          <li>
+            <h3 class="disp title">{d.hasPage ? <a href={d.page}>{d.title}</a> : d.title}</h3>
+            <p class="dim">{d.text}{d.esPage && <> · <a class="mono" href={d.esPage} hreflang="es">es</a></>}</p>
+            {d.hasPage
+              ? (REPO_LIVE
+                  ? <a class="mono" href={`${SPECS_BLOB}/${d.file}`} rel="noopener">{d.file}</a>
+                  : <span class="mono dim">{d.file}</span>)
+              : <span class="mono soon">soon</span>}
+          </li>
+        ))}
+      </ul>
+      <p class="dim" style="margin-top:28px;max-width:46em">The Codex, the chronicle of the species by cause, is at <a href="/codex">/codex</a>. The machine-readable entry points are <a href="/llms.txt" class="mono">/llms.txt</a> and <a href="/.well-known/ilorium.json" class="mono">/.well-known/ilorium.json</a>.</p>
+    </div>
+  </section>
+</Base>

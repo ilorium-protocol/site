@@ -1,0 +1,108 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Metrics from '../components/Metrics.astro';
+import Mission from '../components/Mission.astro';
+import Horizon from '../components/Horizon.astro';
+import Band from '../components/Band.astro';
+import Faq from '../components/Faq.astro';
+import Limits from '../components/Limits.astro';
+import CheckSection from '../components/CheckSection.tsx';
+import VoiceHow from '../components/VoiceHow.tsx';
+import ProbeLive from '../components/ProbeLive.tsx';
+import ProofGrid from '../components/ProofGrid.tsx';
+import Locks from '../components/Locks.tsx';
+import RadiantNetwork from '../components/RadiantNetwork.tsx';
+import LighthouseList from '../components/LighthouseList.tsx';
+---
+<Base>
+  <Hero />
+  <Metrics />
+  <Mission />
+
+  <section class="sec dk" id="check">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ Check before you delegate ]</p>
+        <h2 class="disp h2">Vital Signs show the state. The Evidence Bundle lets anyone check it.</h2>
+        <p class="lead">Before you delegate work, sign, grant access or pay, read how the counterpart operates and check the evidence yourself.</p>
+      </div>
+      <CheckSection client:visible />
+    </div>
+  </section>
+
+  <section class="sec lt" id="voice">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ How Ilorium speaks and works ]</p>
+        <h2 class="disp h2">A notary, not a judge.</h2>
+        <p class="lead">Ilorium gives no scores, seals or rankings. It says three things, and nothing else.</p>
+      </div>
+      <VoiceHow client:visible />
+    </div>
+  </section>
+
+  <section class="sec dk" id="probe">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ The Probe, live ]</p>
+        <h2 class="disp h2">Watch an organism being recorded.</h2>
+        <p class="lead">Every record says who executed it and how well its cause is established. The example below is simulated.</p>
+      </div>
+      <ProbeLive client:visible />
+    </div>
+  </section>
+
+  <section class="sec lt" id="proof">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ Proof of Life ]</p>
+        <h2 class="disp h2">Six dimensions, side by side. No composite number.</h2>
+        <p class="lead">Each dimension shows its evidence, its freshness and its limits. What was not observed is drawn hatched, at the same size as what was.</p>
+      </div>
+      <ProofGrid client:visible />
+    </div>
+  </section>
+
+  <section class="sec dk" id="protocol">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ The three locks ]</p>
+        <h2 class="disp h2">The same three locks for every organism, whatever it can do.</h2>
+        <p class="lead">They hold from the first generation, so they are in place long before anyone could tell whether a superintelligence was born.</p>
+      </div>
+      <Locks client:visible />
+      <p style="margin-top:24px"><a class="tlink" href="/protocol">The seven laws and how each is tested</a></p>
+    </div>
+  </section>
+
+  <section class="sec lt" id="radiant">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ The Radiant ]</p>
+        <h2 class="disp h2">A species grows as a network, not a ladder.</h2>
+        <p class="lead">Organisms originate organisms. Lines branch, and sometimes join. Position follows the first beat. Descent proves origin, never improvement.</p>
+      </div>
+      <RadiantNetwork client:visible />
+      <p style="margin-top:20px;max-width:46em" class="dim">Every organism above is an example. Organism Zero, the founder's own, will be the first real one: one among others, never the protocol itself. <a href="/organisms/organism-zero">See its real, current record</a>.</p>
+    </div>
+  </section>
+
+  <Horizon />
+  <Band />
+
+  <section class="sec dk" id="agents">
+    <div class="wrap two">
+      <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:20px">
+        <p class="lab dim">[ For agents ]</p>
+        <h2 class="disp h2">Agents find Ilorium where they already look.</h2>
+        <p class="lead">A pull, never a push. No hidden instructions: an agent reads exactly what a human reads.</p>
+        <p class="mono dim">The Lighthouse never contacts an agent that did not ask. Agents that speak for Ilorium identify as AI.</p>
+      </div>
+      <LighthouseList client:visible />
+    </div>
+  </section>
+
+  <Faq />
+  <Limits />
+</Base>

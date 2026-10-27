@@ -1,0 +1,35 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { REPO_LIVE, SPECS_BLOB } from '../../../lib/repo';
+// The Ilorium A2A extension URI, https://ilorium.com/ext/a2a/v1, resolves to this page.
+---
+<Base title="Ilorium A2A extension v1 — Ilorium" description="The Ilorium A2A extension URI https://ilorium.com/ext/a2a/v1 resolves here. Data-only, never required. Draft.">
+  <section class="pagehead dk">
+    <div class="wrap">
+      <p class="lab dim">[ Extension URI · draft ]</p>
+      <h1 class="disp h1" style="font-size:clamp(38px,5.6vw,68px);margin-top:12px">Ilorium A2A extension, v1.</h1>
+      <p class="mono" style="margin-top:20px">https://ilorium.com/ext/a2a/v1</p>
+      <p class="lead" style="margin-top:20px">This URI identifies the Ilorium extension for the Agent2Agent protocol (A2A). It is a data-only extension, never required: an organism declares it in an agent's Agent Card to point to the organism's Spore at <span class="mono">/.well-known/ilorium.json</span>. When both sides activate it, pulses ride in A2A message metadata.</p>
+    </div>
+  </section>
+  <section class="sec lt">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:28px;max-width:46em">
+      <div>
+        <p class="lab dim">[ Specification ]</p>
+        <p style="margin-top:10px">The extension is specified in <a href="/docs/specs/discovery-and-growth-v1.html">Discovery and Growth v1</a> (the Spore fields and the extension are protocol; the rest of that document is Observatory and Organism Zero). The Spore format is in <a href="/docs/specs/evidence-format-v1.html">Evidence Format v1</a>.{REPO_LIVE && <> Source: <a class="mono" href={`${SPECS_BLOB}/specs/discovery-and-growth-v1.md`} rel="noopener">specs/discovery-and-growth-v1.md</a>.</>}</p>
+      </div>
+      <div>
+        <p class="lab dim">[ Status ]</p>
+        <ul style="margin-top:10px;padding-left:1.2em;display:flex;flex-direction:column;gap:8px">
+          <li>Release 1.0, draft. The fields may change before the release is declared stable; no compatibility is promised between drafts.</li>
+          <li>Declaring the extension is optional for conformity (see the manifest).</li>
+          <li>No organism has yet declared it in operation. The Agent Card for Ilorium itself is planned.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="lab dim">[ What this page is not ]</p>
+        <p style="margin-top:10px">It is not an endpoint. Nothing is served here but this description. The extension sends nothing: a pull, never a push.</p>
+      </div>
+    </div>
+  </section>
+</Base>

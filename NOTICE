@@ -1,0 +1,17 @@
+Ilorium site (ilorium.com)
+Copyright The Ilorium Authors
+
+Site code (src/, scripts/, tools/, workflows, stylesheets, markup): Apache License 2.0 (LICENSE).
+Site text, the Codex entries and the rendered protocol documents under public/docs/:
+Creative Commons Attribution 4.0 International (LICENSE-SPECS).
+
+The protocol documents are maintained at https://github.com/ilorium-protocol/protocol
+and rendered here unchanged. Example data under public/examples/ is marked example.
+
+Fonts are not Ilorium's work. They are licensed under the SIL Open Font License 1.1
+by their authors and shipped unchanged from the Fontsource packages (node_modules at
+build time; public/fonts/ for the rendered documents; see public/fonts/LICENSE):
+  Fraunces: The Fraunces Project Authors
+  IBM Plex Sans, IBM Plex Mono: IBM Corp.
+
+Astro, React and framer-motion are used under their own licenses (MIT); see package-lock.json.

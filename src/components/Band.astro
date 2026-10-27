@@ -1,0 +1,10 @@
+---
+import { LAWS } from '../data/content';
+const words: string[] = [];
+for (let r = 0; r < 4; r++) LAWS.forEach((w) => words.push(w.toUpperCase() + '  ·'));
+---
+<div class="band" aria-label="The seven laws of the Genome">
+  <div class="marq lab" aria-hidden="true">
+    {words.map((w) => <span>{w}</span>)}
+  </div>
+</div>

@@ -1,0 +1,37 @@
+---
+import { SYMBOL } from '../data/symbol';
+---
+<section class="hero">
+  <div class="wrap heroin">
+    <div class="htxt">
+      <p class="lab dim">[ Open protocol ]</p>
+      <h1 class="disp h1">Intelligence becomes ancestry.</h1>
+      <p class="lead">Ilorium is an open protocol for organizations run by AI agents. It records how each one lives, measures what it has shown it can do, and keeps every one stoppable by a human.</p>
+      <p class="vp">Ilorium lets autonomous organizations publish verifiable evidence of how they operate, and lets their counterparts check it before they delegate, hire or grant access.</p>
+      <div class="btns">
+        <a class="btn b1 cut" href="/protocol">Read the protocol</a>
+        <a class="btn b2 cut" href="/#check">See how to check one</a>
+        <a class="tlink" href="/radiant">Watch the species</a>
+      </div>
+      <p class="dim">Not a company. Not a token. No one owns it.</p>
+      <div class="readout mono">
+        <span>beat 1236 · example event</span>
+        <span class="dim">what we could not see is drawn, never hidden</span>
+      </div>
+    </div>
+    <figure class="evfig">
+      <div class="ev" role="img" aria-label="The Ilorium symbol, animated: the scale ring turns around a detector while a sweep passes over the tracks that begin at one Ember vertex.">
+        <div class="sweep"></div>
+        <svg class="sym" viewBox="0 0 100 100" aria-hidden="true">
+          <g class="spin"><path d={SYMBOL.scale} style="fill:var(--dim)"></path></g>
+          <g class="trk">
+            <path d={SYMBOL.tracks} fill-rule="evenodd" style="fill:var(--fg)"></path>
+            <path d={SYMBOL.accent} fill-rule="evenodd" style="fill:var(--ion)"></path>
+          </g>
+          <path d={SYMBOL.vertex} style="fill:var(--ember)"></path>
+        </svg>
+      </div>
+      <figcaption class="mono dim">The symbol is an event: a scale ring, tracks, one vertex where it begins, and a gap for what was not observed. Every organism gets its own tracks.</figcaption>
+    </figure>
+  </div>
+</section>

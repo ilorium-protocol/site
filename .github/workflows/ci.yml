@@ -1,0 +1,72 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright The Ilorium Authors
+#
+# Site CI. Runs on every pull request and every push to main. It only reads
+# and checks; it never deploys, merges or publishes. The job name `build` is
+# a required status check in the organization ruleset.
+# Third-party actions are pinned to full commit SHAs (version in the comment).
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+
+      # The protocol documents, rendered into public/docs/ before the Astro build.
+      # vars.PROTOCOL_REF selects the tag (protocol/1.0.0-draft.1) once it exists; main until then.
+      - name: Check out the protocol documents
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          repository: ilorium-protocol/protocol
+          ref: ${{ vars.PROTOCOL_REF || 'main' }}
+          path: _protocol
+          persist-credentials: false
+
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+      - run: python3 -m pip install --require-hashes -r tools/requirements.txt
+      - name: Render the documents (tools/build.py)
+        run: python3 tools/build.py --protocol _protocol --public public --ref "${PROTOCOL_REF:-main}"
+        env:
+          PROTOCOL_REF: ${{ vars.PROTOCOL_REF }}
+      - name: Check the Lighthouse files and everything an agent reads
+        run: |
+          python3 tools/check_lighthouse.py --public public
+          python3 tools/check_agent_readable.py public
+
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Type-check Astro and React sources.
+      - run: npm run check
+      # Builds the site, fills the CSP hashes into dist/_headers and runs the verification gate
+      # (no third-party URLs, no banned claims, no hidden characters, every inline script/style hashed).
+      - run: npm run build
+        env:
+          PUBLIC_REPO_LIVE: ${{ vars.PUBLIC_REPO_LIVE || 'false' }}
+      - name: Internal links and HTML of the built site
+        run: python3 tools/check_site.py dist
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: dist
+          path: dist
+          retention-days: 7

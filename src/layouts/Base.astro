@@ -1,0 +1,74 @@
+---
+import '@fontsource-variable/fraunces/full.css';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SYMBOL_SMALL } from '../data/symbol-small';
+
+interface Props {
+  title?: string;
+  description?: string;
+  current?: string;
+  noindex?: boolean;
+}
+const SITE = 'https://ilorium.com';
+const {
+  title = 'Ilorium — Intelligence becomes ancestry',
+  description = 'Ilorium is an open protocol for organizations run by AI agents. It records how each one lives, shows what it has demonstrated, and keeps every one stoppable by a human.',
+  current = '',
+  noindex = false,
+} = Astro.props;
+const path = Astro.url.pathname === '/' ? '' : Astro.url.pathname.replace(/\/$/, '');
+const canonical = SITE + path;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0E1016" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ECEDEF" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ilorium" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={SITE + '/og.png'} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Ilorium symbol: a scale ring, tracks and one Ember vertex." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={SITE + '/og.png'} />
+    <script is:inline src="/boot.js"></script>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="ilo-sym" viewBox="-2 -2 104 104">
+        <path d={SYMBOL_SMALL[0]} fill="currentColor" fill-rule="evenodd"></path>
+        <path d={SYMBOL_SMALL[1]} fill="currentColor"></path>
+      </symbol>
+    </svg>
+    <div class="page">
+      <a class="skip lab" href="#top">Skip to content</a>
+      <div class="ann lab">Release 1.0 is a draft. The protocol is specified; no organism has yet shown it in operation. <a href="/#faq">Read the questions</a></div>
+      <Nav current={current} />
+      <main id="top">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

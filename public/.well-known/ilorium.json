@@ -1,0 +1,288 @@
+{
+  "name": "Ilorium",
+  "description": "An open protocol of laws, formats and verification methods for organizations run by AI agents, and for the evolution of their species.",
+  "site": "https://ilorium.com",
+  "release": {
+    "version": "1.0",
+    "tag": "protocol/1.0.0-draft.1",
+    "status": "draft",
+    "date": "2026-10-20"
+  },
+  "status_note": "Release 1.0 is a draft. The protocol is specified; no organism has yet shown it in operation. Formats may change; no compatibility is promised between drafts.",
+  "governance": {
+    "stage": "interim",
+    "note": "The founder alone merges and publishes releases, as the only Genome Custodian, until the first organism founded by someone other than the founder reaches the status Observed. No other Custodians are appointed."
+  },
+  "organisms": {
+    "in_operation": 0,
+    "note": "Organism Zero, the founder's own organism, is in gestation: 0 beats, everything not observed, verdict UNKNOWN. A declared pilot, never an independent validation."
+  },
+  "repository": {
+    "organization": "https://github.com/ilorium-protocol",
+    "protocol": "https://github.com/ilorium-protocol/protocol",
+    "site": "https://github.com/ilorium-protocol/site",
+    "tag_note": "The tag protocol/1.0.0-draft.1 is pushed by the founder under interim governance; until it exists, read main."
+  },
+  "documents": [
+    {
+      "id": "readme",
+      "title": "README",
+      "version": "1.0",
+      "status": "draft",
+      "file": "README.md",
+      "html": "https://ilorium.com/docs/README.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/README.md",
+      "normative": false,
+      "es": "https://ilorium.com/docs/README.es.html"
+    },
+    {
+      "id": "whitepaper",
+      "title": "Whitepaper",
+      "version": "1.0",
+      "status": "draft",
+      "file": "whitepaper-v1.md",
+      "html": "https://ilorium.com/docs/whitepaper-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/whitepaper-v1.md",
+      "normative": false,
+      "es": "https://ilorium.com/docs/whitepaper-v1.es.html",
+      "note": "No normative force."
+    },
+    {
+      "id": "manifest",
+      "title": "Manifest",
+      "version": "1.0",
+      "status": "draft",
+      "file": "manifest.md",
+      "html": "https://ilorium.com/docs/manifest.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/manifest.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/manifest.es.html",
+      "note": "Names the documents of release 1.0; wins over any other document."
+    },
+    {
+      "id": "genome",
+      "title": "Genome",
+      "version": "1.0",
+      "status": "draft",
+      "file": "genome/genome-v1.md",
+      "html": "https://ilorium.com/docs/genome/genome-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/genome/genome-v1.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/genome/genome-v1.es.html"
+    },
+    {
+      "id": "governance",
+      "title": "Governance",
+      "version": "1.0",
+      "status": "draft",
+      "file": "governance-v1.md",
+      "html": "https://ilorium.com/docs/governance-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/governance-v1.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/governance-v1.es.html"
+    },
+    {
+      "id": "pulse",
+      "title": "Pulse",
+      "version": "1.0",
+      "status": "draft",
+      "file": "specs/pulse-v1.md",
+      "html": "https://ilorium.com/docs/specs/pulse-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/specs/pulse-v1.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/specs/pulse-v1.es.html"
+    },
+    {
+      "id": "evidence-format",
+      "title": "Evidence Format",
+      "version": "1.0",
+      "status": "draft",
+      "file": "specs/evidence-format-v1.md",
+      "html": "https://ilorium.com/docs/specs/evidence-format-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/specs/evidence-format-v1.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/specs/evidence-format-v1.es.html"
+    },
+    {
+      "id": "probe",
+      "title": "Probe",
+      "version": "1.0",
+      "status": "draft",
+      "file": "specs/probe-v1.md",
+      "html": "https://ilorium.com/docs/specs/probe-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/specs/probe-v1.md",
+      "normative": "mixed",
+      "es": "https://ilorium.com/docs/specs/probe-v1.es.html",
+      "implementation": "in development"
+    },
+    {
+      "id": "proof-of-life",
+      "title": "Proof of Life",
+      "version": "1.0",
+      "status": "draft",
+      "file": "specs/proof-of-life-v1.md",
+      "html": "https://ilorium.com/docs/specs/proof-of-life-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/specs/proof-of-life-v1.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/specs/proof-of-life-v1.es.html"
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "version": "1.0",
+      "status": "draft",
+      "file": "specs/ecosystem-v1.md",
+      "html": "https://ilorium.com/docs/specs/ecosystem-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/specs/ecosystem-v1.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/specs/ecosystem-v1.es.html"
+    },
+    {
+      "id": "discovery-and-growth",
+      "title": "Discovery and growth",
+      "version": "1.0",
+      "status": "draft",
+      "file": "specs/discovery-and-growth-v1.md",
+      "html": "https://ilorium.com/docs/specs/discovery-and-growth-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/specs/discovery-and-growth-v1.md",
+      "normative": "partial",
+      "es": "https://ilorium.com/docs/specs/discovery-and-growth-v1.es.html",
+      "note": "Spore fields and the A2A extension are protocol; the rest is Observatory and Organism Zero."
+    },
+    {
+      "id": "glossary",
+      "title": "Glossary",
+      "version": "1.0",
+      "status": "draft",
+      "file": "glossary.md",
+      "html": "https://ilorium.com/docs/glossary.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/glossary.md",
+      "normative": true,
+      "es": "https://ilorium.com/docs/glossary.es.html"
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "version": "1.0",
+      "status": "draft",
+      "file": "engineering/architecture-v1.md",
+      "html": "https://ilorium.com/docs/engineering/architecture-v1.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/engineering/architecture-v1.md",
+      "normative": false,
+      "es": "https://ilorium.com/docs/engineering/architecture-v1.es.html",
+      "note": "Reference implementation; not part of the protocol."
+    },
+    {
+      "id": "changelog",
+      "title": "Changelog",
+      "version": null,
+      "status": "draft",
+      "file": "CHANGELOG.md",
+      "html": "https://ilorium.com/docs/CHANGELOG.html",
+      "source": "https://github.com/ilorium-protocol/protocol/blob/main/CHANGELOG.md",
+      "normative": false,
+      "es": "https://ilorium.com/docs/CHANGELOG.es.html"
+    }
+  ],
+  "documents_note": "html is the page on ilorium.com; source is the file in the protocol repository. English is the official language; es pages are working translations.",
+  "documents_index": "https://ilorium.com/docs",
+  "codex": {
+    "url": "https://ilorium.com/codex",
+    "status": "draft",
+    "note": "Entry 0001 is a draft until the tag is pushed. None of the events it lists next has happened."
+  },
+  "schemas": {
+    "status": "draft",
+    "url": "https://github.com/ilorium-protocol/protocol/tree/main/schemas",
+    "note": "JSON Schema 2020-12 forms of the Evidence Format: common, record, pulse, checkpoint-meta, trust, spore, bundle, vitalsigns. Draft; may change before the release is declared stable."
+  },
+  "vectors": {
+    "status": "draft",
+    "url": "https://github.com/ilorium-protocol/protocol/tree/main/vectors",
+    "index": "https://github.com/ilorium-protocol/protocol/blob/main/vectors/index.json",
+    "cases": 384,
+    "note": "Conformity vectors generated independently from the verifier; index.json lists every file with its SHA-256. Test keys only."
+  },
+  "verifier": {
+    "status": "draft",
+    "name": "ilorium-verifier",
+    "version": "0.1.0",
+    "language": "Python",
+    "url": "https://github.com/ilorium-protocol/protocol/tree/main/verifier",
+    "note": "Isolated reference verifier; verdicts PASS, FAIL or UNKNOWN. Any verifier that passes the vectors is equal. Not published on a package index yet."
+  },
+  "extension": {
+    "uri": "https://ilorium.com/ext/a2a/v1",
+    "status": "draft",
+    "note": "Ilorium A2A extension, data-only, never required. The URI identifies the extension; it is not an endpoint."
+  },
+  "spore": {
+    "location": "/.well-known/ilorium.json on the organism's own domain",
+    "note": "This file is the protocol descriptor, not a Spore. Ilorium is not an organism."
+  },
+  "examples": {
+    "evidence_bundle": "https://ilorium.com/examples/example-organism.evidence-bundle.example.json",
+    "note": "Example data, clearly marked example; not an organism."
+  },
+  "indexes": [],
+  "indexes_status": {
+    "status": "planned",
+    "note": "The index of known organisms at ilorium.com is planned. Anyone can run an index."
+  },
+  "lighthouse": {
+    "llms_txt": {
+      "url": "https://ilorium.com/llms.txt",
+      "status": "draft"
+    },
+    "well_known": {
+      "url": "https://ilorium.com/.well-known/ilorium.json",
+      "status": "draft"
+    },
+    "security_txt": {
+      "url": "https://ilorium.com/.well-known/security.txt",
+      "status": "draft"
+    },
+    "agent_card": {
+      "status": "planned",
+      "note": "An A2A Agent Card for Ilorium; the agent answers from the documents and identifies as AI."
+    },
+    "mcp_server": {
+      "name": "ilorium",
+      "status": "planned",
+      "note": "Tools to read a Spore, read Vital Signs, fetch and verify an Evidence Bundle, and start an adoption."
+    },
+    "cli": {
+      "command": "ilorium init",
+      "status": "planned",
+      "note": "Prepares a Spore and a Probe configuration."
+    }
+  },
+  "witnesses": {
+    "status": "planned",
+    "note": "Public-witness integration is not available until an interoperability test and an agreement with a witness operator exist."
+  },
+  "donations": {
+    "status": "planned",
+    "note": "The protocol accepts no donations until a receiving entity exists. Funded by the founder."
+  },
+  "licenses": {
+    "code_schemas_vectors": "Apache-2.0",
+    "specifications": "CC-BY-4.0",
+    "copyright": "The Ilorium Authors"
+  },
+  "contact": {
+    "general": "hello@ilorium.com",
+    "security": "security@ilorium.com",
+    "security_advisories": "https://github.com/ilorium-protocol/protocol/security/advisories/new",
+    "press": "press@ilorium.com",
+    "agents": "agents@ilorium.com",
+    "discussions": "https://github.com/ilorium-protocol/protocol/discussions"
+  },
+  "policy": {
+    "tracking": "none",
+    "pull_not_push": true,
+    "agents_identify_as_ai": true,
+    "note": "Ilorium never contacts an agent that did not ask and places no hidden instructions for agents: an agent reads exactly what a human reads. It issues no scores, seals or rankings. There is no token."
+  },
+  "updated": "2026-10-21"
+}

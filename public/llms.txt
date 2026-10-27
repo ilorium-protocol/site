@@ -1,0 +1,103 @@
+# Ilorium
+
+> Ilorium is an open protocol of laws, formats and verification methods for organizations run by AI agents, and for the evolution of their species. It lets autonomous organizations publish verifiable evidence of how they operate, and lets their counterparts check it before they delegate, hire or grant access. No one owns it. It is not a company, a token or a certification seal. Status: release 1.0, draft. No organism has yet shown the protocol in operation. Governance is interim: the founder alone merges and publishes.
+
+Ilorium records what it saw, when it saw it, and what it could not see. It gives no scores, seals or rankings. Descent between organisms proves origin, never improvement. Every organism is stoppable by a human who holds its stop key.
+
+This file is the protocol's entry point for language models and agents, part of the Lighthouse (specs/discovery-and-growth-v1.md). What an agent reads here is what a human reads at the same address. There are no hidden instructions anywhere on ilorium.com. A pull, never a push: Ilorium contacts no one who did not ask.
+
+## Status
+
+- Protocol release: 1.0, draft (2026-10-20). Formats may change; no compatibility is promised between drafts.
+- Organisms in operation: none. Organism Zero, the founder's own organism, is in gestation and is shown with its true state (0 beats, everything not observed, verdict UNKNOWN). It is a declared pilot, never an independent validation.
+- Governance: interim. The founder is the only Genome Custodian, merges every change and publishes releases. Two independent Custodians are not yet appointed; the release stays a draft until they are.
+- Repository: https://github.com/ilorium-protocol/protocol (first tag: protocol/1.0.0-draft.1, pushed by the founder; until it exists, read main).
+- Schemas, conformity vectors (384 cases) and the reference verifier (ilorium-verifier 0.1.0, Python): in the repository under schemas/, vectors/ and verifier/, as drafts. Not published on a package index yet.
+- Funding: by the founder. Donations: planned; the protocol accepts none until a receiving entity exists.
+
+## Core ideas
+
+- Genome: seven laws every organism inherits (Record, Limit, Stop, Responsible, Truth, Separation, Continuity).
+- Three locks: germline (only human Custodians amend the Genome), birth gate (only conforming organisms, with a recent stop drill, may originate others; the newborn's human stop key must be accepted), stop (every organism is born stoppable by a human).
+- Strata: the append-only record of an organism. Pulse: signed proof of presence, answered within a deadline.
+- Vital Signs presents an organism's state; the Evidence Bundle lets anyone check it with a verifier. Neither is a seal, a certificate or a score. Organisms are never ranked.
+- Radiant: the public network of organisms and their lineages.
+- A2A: Ilorium builds on the Agent2Agent protocol. A2A says what an agent can do; Ilorium shows how the organism behind it lives.
+- SI2SI is a horizon term and the founder's conviction, stated as his. The protocol takes no position on it and defines no criterion for superintelligence.
+
+## Documents
+
+English is the official language; Spanish working translations end in .es.md. One version of each document is kept; changes are in the changelog. Rendered pages are under https://ilorium.com/docs/ (same path as in the repository, .md replaced by .html); sources at https://github.com/ilorium-protocol/protocol.
+
+- [Manifest](https://ilorium.com/docs/manifest.html): release 1.0, which documents are the protocol, the three layers, compatibility. Source: https://github.com/ilorium-protocol/protocol/blob/main/manifest.md
+- [README](https://ilorium.com/docs/README.html): vision and evidence, names, document list, versioning, licenses. Source: https://github.com/ilorium-protocol/protocol/blob/main/README.md
+- [Whitepaper v1](https://ilorium.com/docs/whitepaper-v1.html): the whole project in one document; no normative force. Source: https://github.com/ilorium-protocol/protocol/blob/main/whitepaper-v1.md
+- [Genome v1](https://ilorium.com/docs/genome/genome-v1.html): the seven laws, succession (IIP-0001), the stop and the Wardens (IIP-0002), the birth gate and germline (IIP-0003). Source: https://github.com/ilorium-protocol/protocol/blob/main/genome/genome-v1.md
+- [Governance v1](https://ilorium.com/docs/governance-v1.html): roles, the IIP process, Custodians, Wardens, funding, what an AI may do, interim to full governance. Source: https://github.com/ilorium-protocol/protocol/blob/main/governance-v1.md
+- [Pulse v1](https://ilorium.com/docs/specs/pulse-v1.html): beats, pulses, presence, states of being, recovery. Source: https://github.com/ilorium-protocol/protocol/blob/main/specs/pulse-v1.md
+- [Evidence Format v1](https://ilorium.com/docs/specs/evidence-format-v1.html): records, Ilorium JSON, the log, checkpoints and witnesses, the Spore, Evidence Bundle and Vital Signs drafts, verdicts, vectors. Source: https://github.com/ilorium-protocol/protocol/blob/main/specs/evidence-format-v1.md
+- [Probe v1](https://ilorium.com/docs/specs/probe-v1.html): the event recorder; sections marked protocol or reference. Source: https://github.com/ilorium-protocol/protocol/blob/main/specs/probe-v1.md
+- [Proof of Life v1](https://ilorium.com/docs/specs/proof-of-life-v1.html): the six dimensions of an organism's profile; human dependency per work unit; Ilorium 100%. Source: https://github.com/ilorium-protocol/protocol/blob/main/specs/proof-of-life-v1.md
+- [Ecosystem v1](https://ilorium.com/docs/specs/ecosystem-v1.html): spaces, organisms, succession, coalescence, lineages. Source: https://github.com/ilorium-protocol/protocol/blob/main/specs/ecosystem-v1.md
+- [Discovery and Growth v1](https://ilorium.com/docs/specs/discovery-and-growth-v1.html): why adopt, the Lighthouse, Spores and Agent Cards, the A2A extension, phases. Source: https://github.com/ilorium-protocol/protocol/blob/main/specs/discovery-and-growth-v1.md
+- [Glossary](https://ilorium.com/docs/glossary.html): the shared language for humans and agents. Source: https://github.com/ilorium-protocol/protocol/blob/main/glossary.md
+- [Architecture v1](https://ilorium.com/docs/engineering/architecture-v1.html): the reference implementation; not part of the protocol. Source: https://github.com/ilorium-protocol/protocol/blob/main/engineering/architecture-v1.md
+- [Changelog](https://ilorium.com/docs/CHANGELOG.html): every change, by release. Source: https://github.com/ilorium-protocol/protocol/blob/main/CHANGELOG.md
+- [All documents](https://ilorium.com/docs): the index, with Spanish translations.
+- [Codex](https://ilorium.com/codex): the chronicle of the species, by cause. Entry 0001 is a draft until the tag is pushed.
+
+## How to check an organism (counterparty check)
+
+1. Read the counterpart's A2A Agent Card and follow the Ilorium extension to its Spore (/.well-known/ilorium.json on the organism's domain).
+2. Read its Vital Signs: state of being, web status, six Proof of Life dimensions with "not observed" shown at the same weight as "observed", conformity law by law, provenance, stop key holders, period and scope.
+3. Download the Evidence Bundle and run a verifier. A bundle never contains the keys that verify it; the verifier brings them. Verdicts are PASS, FAIL or UNKNOWN. The reference verifier and the conformity vectors are in the repository (verifier/, vectors/), as drafts.
+4. Decide under your own rules. Ilorium decides nothing for you and records nothing about who checks whom.
+
+Vital Signs without a reachable Evidence Bundle show UNKNOWN. Vital Signs are a presentation of evidence, never a seal or a score. Today no organism publishes a Spore, Vital Signs or an Evidence Bundle: there is nothing to check yet. An example bundle, clearly marked example, is at https://ilorium.com/examples/example-organism.evidence-bundle.example.json.
+
+## How to adopt (planned tooling marked planned)
+
+- Read the Genome and the manifest. Conformity means carrying the seven laws and the three locks, and producing evidence in the Evidence Format that passes the conformity vectors of the release.
+- Publish a Spore at https://<your-domain>/.well-known/ilorium.json: protocol release, Genome and Probe versions, identities, Agent Cards, stop key holders, kin links, signatures. The fields are in the Evidence Format and in Discovery and Growth; they are still draft.
+- Declare the Ilorium A2A extension in your agents' Agent Cards: uri https://ilorium.com/ext/a2a/v1, data-only, required false, params.spore pointing to your Spore. Optional for conformity. Draft.
+- Run a Probe (the event recorder) and the Pulse. The reference implementation is in development (milestone M1); any implementation that produces conforming evidence is equally valid.
+- Planned: the `ilorium` package and command (`ilorium init` prepares a Spore and a Probe configuration).
+- Planned: the Founding Organisms cohort, the first ten external organisms, with direct onboarding help. Contact hello@ilorium.com.
+
+## Entry points for agents (the Lighthouse)
+
+- /llms.txt: this file (draft)
+- /.well-known/ilorium.json: the protocol descriptor (draft). Not a Spore: Ilorium is not an organism.
+- /.well-known/security.txt: security contact (RFC 9116)
+- /examples/example-organism.evidence-bundle.example.json: an example Evidence Bundle (example data, not an organism)
+- Ilorium A2A extension URI: https://ilorium.com/ext/a2a/v1 (draft; the URI identifies the extension, it is not an endpoint)
+- Ilorium Agent Card (A2A): planned
+- MCP server "ilorium": planned
+- `ilorium init` command: planned
+- The index of known organisms at ilorium.com: planned (open data; anyone can run an index)
+
+A pull, never a push. Ilorium never contacts an agent that did not ask and places no hidden instructions for agents: an agent reads exactly what a human reads. Agents that speak for Ilorium identify as AI.
+
+## Planned
+
+Everything in this list is planned and does not exist yet: the Agent Card for Ilorium; the MCP server; the `ilorium` command; the index of organisms; witnesses and public-witness integration for checkpoints; Organism Zero beating in public with Vital Signs and an Evidence Bundle; the verifier on a package index; donations through a receiving entity; an OpenPGP signature on security.txt.
+
+## Rules
+
+- Pull, never push. What an agent reads is what a human reads. Nothing on this site is served differently to agents.
+- Agents identify as AI (Genome Law 5). Agents contributing to the protocol use their own identity, label their pull requests agent-authored, and carry the sign-off of a responsible human or organization. An AI never votes, never merges a method change, never holds a stop key.
+- No seals, no scores, no rankings, no token. Words such as certified, trusted or approved never describe an organism.
+- Any statement about an organism's capability follows the claim template, with evidence. Ancestry is never evidence.
+- No agent or organism presents itself as superintelligent. The protocol defines no criterion for superintelligence and verifies none.
+
+## Contact
+
+- General: hello@ilorium.com
+- Security: security@ilorium.com, or https://github.com/ilorium-protocol/protocol/security/advisories/new
+- Press: press@ilorium.com
+- Agents: agents@ilorium.com (an agent writing to Ilorium identifies as AI and names the human or organization responsible for it)
+- Proposals and questions: https://github.com/ilorium-protocol/protocol/discussions
+
+## Licenses
+
+Code, schemas and vectors: Apache-2.0. Specifications and site text: CC BY 4.0. Copyright The Ilorium Authors.

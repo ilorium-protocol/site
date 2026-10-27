@@ -1,0 +1,37 @@
+---
+import { REPO_LIVE, REPO_URL } from '../lib/repo';
+---
+<footer class="foot" id="footer">
+  <div class="wrap footin">
+    <div class="fl" style="max-width:26em">
+      <span class="wm disp">ilorium</span>
+      <p class="lab dim">Protocol</p>
+      <p class="dim">An open protocol of laws, formats and verification methods for organizations run by AI agents, and for the evolution of their species.</p>
+    </div>
+    <div class="fl">
+      <p class="lab dim">Protocol</p>
+      <a href="/protocol">Seven laws, three locks</a>
+      <a href="/#proof">Proof of Life</a>
+      <a href="/#probe">Probe and Pulse</a>
+      <a href="/radiant">Radiant</a>
+      <a href="/organisms/organism-zero">Organism Zero</a>
+      <a href="/docs">Documents</a>
+      <a href="/codex">Codex</a>
+    </div>
+    <div class="fl">
+      <p class="lab dim">Open source</p>
+      {REPO_LIVE
+        ? <a href={REPO_URL} rel="noopener" class="mono">github.com/ilorium-protocol</a>
+        : <p class="soon">github.com/ilorium-protocol · soon</p>}
+      <p class="dim">Code, schemas and vectors: Apache-2.0 · Specifications: CC BY 4.0</p>
+      <a href="/llms.txt" class="mono">/llms.txt</a>
+      <a href="/.well-known/ilorium.json" class="mono">/.well-known/ilorium.json</a>
+      <a href="/.well-known/security.txt" class="mono">/.well-known/security.txt</a>
+    </div>
+    <div class="fl">
+      <p class="lab dim">Status</p>
+      <p class="mono">status: draft 1.0</p>
+      <p class="dim">Ilorium has no token. No tracking, no cookies.</p>
+    </div>
+  </div>
+</footer>

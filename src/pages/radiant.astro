@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import RadiantNetwork from '../components/RadiantNetwork.tsx';
+---
+<Base current="radiant" title="The Radiant — Ilorium" description="A species grows as a network, not a ladder. The Radiant shows organisms and their lineages, ordered by first beat. Never a ranking.">
+  <section class="pagehead lt">
+    <div class="wrap">
+      <p class="lab dim">[ The Radiant ]</p>
+      <h1 class="disp h1" style="font-size:clamp(38px,5.6vw,68px);margin-top:12px">A species grows as a network, not a ladder.</h1>
+      <p class="lead" style="margin-top:20px">The Radiant is the public map of organisms and their lineages. Lines branch, and sometimes join. Position follows the first beat. Descent proves origin, never improvement.</p>
+    </div>
+  </section>
+
+  <section class="sec lt">
+    <div class="wrap">
+      <div class="panel" style="padding:16px 20px;margin-bottom:24px;display:flex;flex-wrap:wrap;gap:8px 28px">
+        <span class="lab">today</span>
+        <span class="lab dim">organisms in operation: 0</span>
+        <span class="lab dim">Organism Zero: in gestation</span>
+        <span class="lab dim">the network below is an example</span>
+      </div>
+      <RadiantNetwork client:visible />
+      <p class="dim" style="margin-top:20px;max-width:46em">The Radiant lists no organism today because none has yet shown the protocol in operation. When one does, it appears here with its state, its status and its evidence. <a href="/organisms/organism-zero">Organism Zero</a> is the first.</p>
+    </div>
+  </section>
+</Base>

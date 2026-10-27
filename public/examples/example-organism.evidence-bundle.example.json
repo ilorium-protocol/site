@@ -1,0 +1,13 @@
+{
+  "example": true,
+  "note": "Illustrative example only. Not a verifiable bundle. Real Evidence Bundles follow the Evidence Format.",
+  "organism": "example-organism",
+  "period": { "from": "2026-10-01", "to": "2026-10-20" },
+  "contains": [
+    "Strata export (records, checkpoints, pulses)",
+    "Spore, as it stood",
+    "Proof of Life evaluations and claims"
+  ],
+  "keys_included": false,
+  "establishes": "integrity of the evidence, nothing more"
+}

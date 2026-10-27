@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright The Ilorium Authors
+#
+# Caller for the security agent's review. The reusable workflow lives in the
+# org repository ilorium-protocol/.github. The agent is AI (Genome Law 5); it
+# reads and comments, and never approves, merges or deploys. Its model review
+# step is planned until the founder configures a key.
+
+name: security-agent-review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  security-agent-review:
+    name: security-agent-review
+    uses: ilorium-protocol/.github/.github/workflows/security-agent-review.yml@main
+    secrets: inherit

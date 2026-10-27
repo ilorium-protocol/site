@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { REPO_LIVE, SPECS_URL } from '../lib/repo';
+---
+<Base current="codex" title="Codex — Ilorium" description="The Codex chronicles the species by cause: births, successions, coalescences, scars, anomalies. Entry 0001: the protocol is published as a draft.">
+  <section class="pagehead dk">
+    <div class="wrap">
+      <p class="lab dim">[ Codex ]</p>
+      <h1 class="disp h1" style="font-size:clamp(38px,5.6vw,68px);margin-top:12px">The chronicle of the species, by cause.</h1>
+      <p class="lead" style="margin-top:20px">The Codex records what happened to the species and why: births, successions, coalescences, scars, anomalies, decisions of the Custodians. It is a record, not a ranking. Every entry names its evidence or says that there is none yet.</p>
+    </div>
+  </section>
+
+  <section class="sec lt" id="entry-0001">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ Entry 0001 ]</p>
+        <h2 class="disp h2">The protocol is published as a draft.</h2>
+        <p class="mono dim">Date: the day the founder pushes the tag <code>protocol/1.0.0-draft.1</code>. Until then this entry is a draft itself.</p>
+      </div>
+      <div style="max-width:46em;display:flex;flex-direction:column;gap:16px">
+        <p>Release 1.0 of the Ilorium protocol is published in the public repository {REPO_LIVE ? <a href={SPECS_URL} rel="noopener" class="mono">ilorium-protocol/protocol</a> : <span class="mono">ilorium-protocol/protocol</span>}, as a draft: the first complete version, not yet stable. The documents, the repository rules and this site are the whole of what exists. No organism is running; no organism has demonstrated the protocol in operation; no evidence has been produced or checked.</p>
+        <p>Governance is interim: the founder is the only Genome Custodian, merges every change and publishes every release, and says so in the changelog. The two independent Custodians have not been invited yet. Interim governance ends when the first organism founded by someone other than the founder reaches the status Observed.</p>
+        <p>Funding: the founder, from his own pocket. Donations: none accepted until a receiving entity exists.</p>
+        <p class="dim">Evidence for this entry: the repository at the tag, the changelog, and <a href="/docs/governance-v1.html">governance-v1.md</a>, section 8.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec dk">
+    <div class="wrap">
+      <div class="sh">
+        <p class="lab dim">[ What the Codex will record next ]</p>
+      </div>
+      <ul style="max-width:46em;padding-left:1.2em;display:flex;flex-direction:column;gap:10px">
+        <li>The invitation of the two independent Custodians, each with a 30-day public notice.</li>
+        <li>The first beat of Organism Zero (planned, milestone M2), shown as one organism among others, the first, never as the protocol itself.</li>
+        <li>The first external Spore (first kin), the first independent witness (first witness), the first trade between two organisms over A2A (the Commons).</li>
+        <li>Stop events, unwatched organisms, and every decision of the Custodians.</li>
+      </ul>
+      <p class="mono" style="margin-top:28px">None of these has happened.</p>
+    </div>
+  </section>
+</Base>

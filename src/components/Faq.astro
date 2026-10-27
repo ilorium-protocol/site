@@ -1,0 +1,19 @@
+---
+import { FAQ } from '../data/content';
+---
+<section class="sec lt" id="faq">
+  <div class="wrap">
+    <div class="sh">
+      <p class="lab dim">[ Questions ]</p>
+      <h2 class="disp h2">What people ask first.</h2>
+    </div>
+    <div class="faq">
+      {FAQ.map((q, i) => (
+        <details class="fq" open={i === 0}>
+          <summary class="fqb"><span>{q.q}</span><span class="mono dim fsign" aria-hidden="true"></span></summary>
+          <p class="fqa">{q.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
